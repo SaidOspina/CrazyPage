@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Crazy Studios</title>
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Crazy Studios Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="html/servicios.html">SERVICIOS</a></li>
+                <li><a href="html/planes.html">PLANES</a></li>
+                <li><a href="html/contacto.html">CONTACTO</a></li>
+                <li><a href="html/nosotros.html">NOSOTROS</a></li>
+            </ul>
+            <div class="user-menu">
+                <div class="user-info">
+                    <span id="user-name">Cargando...</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="dashboard.html" class="dropdown-item">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                    <a href="profile.html" class="dropdown-item">
+                        <i class="fas fa-user"></i> Mi Perfil
+                    </a>
+                    <a href="#" id="logout-btn" class="dropdown-item">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Panel de Usuario</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fas fa-user"></i>
+                        <span>Mi Perfil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="services.html">
+                        <i class="fas fa-list"></i>
+                        <span>Mis Servicios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="invoices.html">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Facturas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tickets.html">
+                        <i class="fas fa-ticket-alt"></i>
+                        <span>Soporte</span>
+                    </a>
+                </li>
+                <li class="separator"></li>
+                <li>
+                    <a href="#" id="sidebar-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="page-header">
+                <h1>Bienvenido a tu Dashboard</h1>
+                <p id="date-display">Lunes, 28 de abril, 2025</p>
+            </div>
+            
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Servicios Activos</h3>
+                        <p>2</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Plan Actual</h3>
+                        <p>Premium</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Tiempo Restante</h3>
+                        <p>28 días</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Tickets Abiertos</h3>
+                        <p>0</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Activities -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>Actividad Reciente</h2>
+                    <a href="#" class="view-all">Ver Todo</a>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-sign-in-alt"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Inicio de Sesión</h4>
+                            <p>Has iniciado sesión desde una nueva ubicación</p>
+                            <span class="activity-time">Hoy, 10:30 AM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Pago Realizado</h4>
+                            <p>Pago del plan Premium procesado correctamente</p>
+                            <span class="activity-time">Ayer, 3:45 PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Notificación</h4>
+                            <p>Tu reporte de marketing está listo para revisión</p>
+                            <span class="activity-time">25 Abr, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Active Services -->
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>Servicios Activos</h2>
+                    <a href="services.html" class="view-all">Ver Todos</a>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-hashtag"></i>
+                            </div>
+                            <div class="service-badge active">Activo</div>
+                        </div>
+                        <h3>Gestión de Redes Sociales</h3>
+                        <div class="service-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                            <span>12/16 publicaciones</span>
+                        </div>
+                        <div class="service-dates">
+                            <div class="date-item">
+                                <span>Inicio</span>
+                                <p>1 Abr, 2025</p>
+                            </div>
+                            <div class="date-item">
+                                <span>Renovación</span>
+                                <p>1 May, 2025</p>
+                            </div>
+                        </div>
+                        <a href="service-details.html" class="service-link">Ver Detalles</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="service-badge active">Activo</div>
+                        </div>
+                        <h3>Desarrollo Web</h3>
+                        <div class="service-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%;"></div>
+                            </div>
+                            <span>Fase 2/5</span>
+                        </div>
+                        <div class="service-dates">
+                            <div class="date-item">
+                                <span>Inicio</span>
+                                <p>15 Abr, 2025</p>
+                            </div>
+                            <div class="date-item">
+                                <span>Entrega Est.</span>
+                                <p>15 Jun, 2025</p>
+                            </div>
+                        </div>
+                        <a href="service-details.html" class="service-link">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+        <div class="copyright">
+            <p>&copy; 2025 Crazy Studios. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
